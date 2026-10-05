@@ -223,7 +223,7 @@ function processFamily(familyName, family) {
 
   // Track founding couple
   const mainFamilies = ["Robinson", "Davis", "Royyuru", "Viswanadham"];
-  const secondaryFamilies = ["Evani", "Furbee", "Long", "Conant", "Zuber", "Yellapantula", "Gudipati", "Bugga"];
+  const secondaryFamilies = ["Evani", "Furbee", "Long", "Conant", "Zuber", "Gardill", "Yellapantula", "Gudipati", "Bugga"];
   const allFamilies = [...mainFamilies, ...secondaryFamilies]; // Evani reachable via "View Ancestors"
 
   if (allFamilies.includes(familyName)) {

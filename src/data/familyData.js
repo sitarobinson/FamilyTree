@@ -331,11 +331,14 @@ export const familyData = {
                 name: "Jodie Gardill",
                 gender: "F",
                 birthyear: 1976,
+                profession: "Lawyer",
                 imageLink: "/photos/Gardill/JodieGardill.jpg",
                 spouse: {
                   name: "Chris Gardill",
                   gender: "M",
+                  profession: "Lawyer",
                   imageLink: "/photos/Gardill/ChrisGardill.jpg",
+                  fromFamily: { ref: "Gardill.Linda Gardill" },
                 },
                 children: [
                   {
@@ -912,6 +915,7 @@ export const familyData = {
           {
             name: "Chitti Babu",
             gender: "M",
+            profession: "Accountant",
             children: [{ name: "Pranav", gender: "M" }],
           },
         ],
@@ -1225,6 +1229,7 @@ export const familyData = {
           {
             name: "Babu Rao Polepeddi",
             gender: "M",
+            profession: "Accountant",
             spouse: { name: "Babu Rao's wife", gender: "F" },
             children: [{ name: "Vachaspathy Polepeddi", gender: "M" }],
           },
@@ -2508,6 +2513,64 @@ export const familyData = {
         deathyear: 2019,
         imageLink: "/photos/Zuber/JarettZuber.jpg",
         gender: "M",
+      },
+    ],
+  },
+  Gardill: {
+    founders: [
+      {
+        name: "James Gardill",
+        gender: "M",
+        birthyear: 1946,
+        profession: "Lawyer",
+      },
+      {
+        name: "Linda Gardill",
+        gender: "F",
+        birthyear: 1947,
+        deathyear: 2026,
+      },
+    ],
+    children: [
+      {
+        name: "Rebecca Wagner",
+        gender: "F",
+        spouse: {
+          name: "Andrew Wagner",
+          gender: "M",
+        },
+        children: [
+          {
+            name: "Olivia Wagner",
+            gender: "F",
+          },
+          {
+            name: "Isabella Wagner",
+            gender: "F",
+          },
+        ],
+      },
+      {
+        name: "Catherine Ballard",
+        gender: "F",
+        spouse: {
+          name: "Jason Ballard",
+          gender: "M",
+        },
+        children: [
+          {
+            name: "William Ballard",
+            gender: "M",
+          },
+          {
+            name: "James Ballard",
+            gender: "M",
+          },
+          {
+            name: "John Thomas Ballard",
+            gender: "M",
+          },
+        ],
       },
     ],
   },

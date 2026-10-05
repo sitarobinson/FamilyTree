@@ -2543,10 +2543,12 @@ export const familyData = {
           {
             name: "Olivia Wagner",
             gender: "F",
+            birthyear: 2012,
           },
           {
             name: "Isabella Wagner",
             gender: "F",
+            birthyear: 2015
           },
         ],
       },
@@ -2561,14 +2563,17 @@ export const familyData = {
           {
             name: "William Ballard",
             gender: "M",
+            birthyear: 2008
           },
           {
             name: "James Ballard",
             gender: "M",
+            birthyear: 2010
           },
           {
             name: "John Thomas Ballard",
             gender: "M",
+            birthyear: 2014
           },
         ],
       },

@@ -267,11 +267,11 @@ export const familyData = {
                     gender: "F",
                     birthyear: 2005,
                     birthplace: "WV",
-                    imageLink: "/photos/Robinson/HannahRobinson.jpg",
+                    imageLink: "/photos/Anderson/HannahRobinson.jpg",
                     spouse: {
                       name: "Nick Anderson",
                       gender: "M",
-                      imageLink: "/photos/Robinson/HannahRobinson.jpg",
+                      imageLink: "/photos/Anderson/NickAnderson.jpg",
                     },
                   },
                 ],

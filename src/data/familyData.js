@@ -1023,6 +1023,7 @@ export const familyData = {
                   {
                     name: "Harsha's daughter",
                     gender: "F",
+                    birthyear: 2024
                   },
                 ],
               },
@@ -1231,7 +1232,7 @@ export const familyData = {
             gender: "M",
             profession: "Accountant",
             spouse: { name: "Babu Rao's wife", gender: "F" },
-            children: [{ name: "Vachaspathy Polepeddi", gender: "M" }],
+            children: [{ name: "Vachaspathy Polepeddi", gender: "M", profession: "Aerospace Engineer" }],
           },
           {
             name: "Rama",
@@ -1456,9 +1457,9 @@ export const familyData = {
                 imageLink: "/photos/AdityaViswanatham.jpg",
                 birthyear: 1999,
                 spouse: {
-                  name: "Rukmini Viswanatham",
+                  name: "Rukmini Bugga",
                   gender: "F",
-                  imageLink: "/photos/RukminiViswanatham.jpg",
+                  imageLink: "/photos/RukminiBugga.jpg",
                   fromFamily: { ref: "Bugga.Bugga Ananthalakshmi" },
                 },
               },

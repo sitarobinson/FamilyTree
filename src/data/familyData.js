@@ -120,7 +120,7 @@ export const familyData = {
                   "Oliver Johnson",
                   "Lauren Johnson",
                   "Sita Robinson",
-                  "Hannah Robinson",
+                  "Hannah Anderson",
                   "Elijah Robinson",
                 ],
               },
@@ -262,7 +262,7 @@ export const familyData = {
                     imageLink: "/photos/Robinson/ElijahRobinson.jpg",
                   },
                   {
-                    name: "Hannah Robinson",
+                    name: "Hannah Anderson",
                     profession: "Registered Nurse (NICU)",
                     gender: "F",
                     birthyear: 2005,
@@ -1458,6 +1458,7 @@ export const familyData = {
                 birthyear: 1999,
                 spouse: {
                   name: "Rukmini Bugga",
+                  profession: "Software Engineer",
                   gender: "F",
                   imageLink: "/photos/RukminiBugga.jpg",
                   fromFamily: { ref: "Bugga.Bugga Ananthalakshmi" },

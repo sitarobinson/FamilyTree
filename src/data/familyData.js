@@ -178,7 +178,7 @@ export const familyData = {
                 birthyear: 1969,
                 imageLink: "/photos/Robinson/ClarkRobinson.jpg",
                 birthplace: "Clarksburg, WV",
-                familyPhotos: [{ src: "/familyPhotos/clarkrobinsonfam.jpg" }],
+                familyPhotos: [{ src: "/familyPhotos/clarkrobinsonfam.jpg" }, { src: "/familyPhotos/clarkrobinsonfam2.jpg" }],
                 spouse: {
                   name: "Jennifer Robinson",
                   gender: "F",

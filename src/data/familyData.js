@@ -2680,4 +2680,5 @@ export const familyData = {
 export const mixedPhotos = [
   { src: "/mixedPhotos/robinsondavis.jpg" },
   { src: "/mixedPhotos/robinsonroyyuru.jpg" },
+  { src: "/mixedPhotos/robinsonroyyuru2.jpg" },
 ];

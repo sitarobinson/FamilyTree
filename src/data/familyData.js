@@ -479,6 +479,17 @@ export const familyData = {
         deathplace: "Shelby, Ohio",
         imageLink: "/photos/Davis/RexDavis.jpg",
         militaryService: "US Army WWII - China Burma India Theatre",
+        familyPhotos: [
+          {
+            src: "/familyPhotos/davisfam.jpg",
+            people: [
+              "Sonny Davis",
+              "Ross Davis",
+              "Sandra Robinson",
+              "Rebecca Davis",
+            ],
+          },
+        ],
         spouse: {
           name: "Wilma Davis",
           gender: "F",
@@ -1023,7 +1034,7 @@ export const familyData = {
                   {
                     name: "Harsha's daughter",
                     gender: "F",
-                    birthyear: 2024
+                    birthyear: 2024,
                   },
                 ],
               },
@@ -1232,7 +1243,13 @@ export const familyData = {
             gender: "M",
             profession: "Accountant",
             spouse: { name: "Babu Rao's wife", gender: "F" },
-            children: [{ name: "Vachaspathy Polepeddi", gender: "M", profession: "Aerospace Engineer" }],
+            children: [
+              {
+                name: "Vachaspathy Polepeddi",
+                gender: "M",
+                profession: "Aerospace Engineer",
+              },
+            ],
           },
           {
             name: "Rama",
@@ -2550,7 +2567,7 @@ export const familyData = {
           {
             name: "Isabella Wagner",
             gender: "F",
-            birthyear: 2015
+            birthyear: 2015,
           },
         ],
       },
@@ -2565,17 +2582,17 @@ export const familyData = {
           {
             name: "William Ballard",
             gender: "M",
-            birthyear: 2008
+            birthyear: 2008,
           },
           {
             name: "James Ballard",
             gender: "M",
-            birthyear: 2010
+            birthyear: 2010,
           },
           {
             name: "John Thomas Ballard",
             gender: "M",
-            birthyear: 2014
+            birthyear: 2014,
           },
         ],
       },

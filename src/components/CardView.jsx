@@ -3,6 +3,7 @@ import { useFamilyTree } from '../hooks/useFamilyTree';
 import ExpandablePersonCard from './ExpandablePersonCard';
 import FamilyPhotoCarousel from './FamilyPhotoCarousel';
 import Icon from './Icons.jsx';
+import { mixedPhotos } from '../data/familyData.js';
 
 /**
  * CardView component displays family members starting with 4 founding couples,
@@ -193,6 +194,25 @@ function CardView({ data, navStack, setNavStack, onJumpToTree, searchTargetId, o
           </section>
         );
       })}
+
+      {/* Mixed photos - only on the main (top-level) view */}
+      {navStack.length === 1 && (
+        <section className="mixed-photos-section">
+          <div className="mixed-photos-divider">
+            <h3 className="mixed-photos-title">Mixed Photos</h3>
+          </div>
+          <p className="mixed-photos-subtitle">
+            Photos across the families · {mixedPhotos.length} {mixedPhotos.length === 1 ? 'photo' : 'photos'}
+          </p>
+          <div className="mixed-photos-body">
+            {mixedPhotos.length > 0 ? (
+              <FamilyPhotoCarousel photos={mixedPhotos} onPersonClick={handlePersonChipClick} />
+            ) : (
+              <div className="mixed-photos-empty">No photos added yet</div>
+            )}
+          </div>
+        </section>
+      )}
     </div>
   );
 }

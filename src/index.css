@@ -1561,3 +1561,70 @@ svg {
     display: none;
   }
 }
+/* ===== Mixed Photos Section (bottom of main card view) ===== */
+
+.mixed-photos-section {
+  margin: 40px 0 24px;
+}
+
+/* Centered title flanked by thin rules, instead of a pink card header */
+.mixed-photos-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.mixed-photos-divider::before,
+.mixed-photos-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(194, 24, 91, 0.35), transparent);
+}
+
+.mixed-photos-title {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  color: #c2185b;
+}
+
+.mixed-photos-subtitle {
+  margin: 4px 0 14px;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-dark);
+  opacity: 0.55;
+}
+
+/* Album-page panel: warm paper tone with a dashed border */
+.mixed-photos-body {
+  background: #fdf8f3;
+  border: 1.5px dashed rgba(194, 24, 91, 0.25);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.mixed-photos-empty {
+  color: var(--text-dark);
+  opacity: 0.6;
+  font-size: 14px;
+  font-style: italic;
+  text-align: center;
+  margin: 8px 0;
+}
+
+@media (max-width: 600px) {
+  .mixed-photos-section {
+    margin-top: 32px;
+  }
+
+  .mixed-photos-body {
+    padding: 12px 8px;
+  }
+}

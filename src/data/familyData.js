@@ -2668,3 +2668,16 @@ export const familyData = {
     ],
   },
 };
+
+/**
+ * Mixed photos - shown in a section at the bottom of the main card view.
+ * Put image files in /public/mixedPhotos and list them here.
+ * `people` is optional; names become clickable chips that jump to that person.
+ *
+ * Example:
+ *   { src: "/mixedPhotos/reunion.jpg", people: ["Jim Robinson", "Sandra Robinson"] },
+ */
+export const mixedPhotos = [
+  { src: "/mixedPhotos/robinsondavis.jpg" },
+  { src: "/mixedPhotos/robinsonroyyuru.jpg" },
+];

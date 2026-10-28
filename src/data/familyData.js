@@ -91,6 +91,7 @@ export const familyData = {
             imageLink: "/photos/Robinson/JimRobinson.jpg",
             spouse: { ref: "Davis.Sandra Robinson" },
             familyPhotos: [
+              { src: "/familyPhotos/robinson8.jpg" },
               {
                 src: "/familyPhotos/robinson.jpg",
                 people: [
@@ -178,7 +179,10 @@ export const familyData = {
                 birthyear: 1969,
                 imageLink: "/photos/Robinson/ClarkRobinson.jpg",
                 birthplace: "Clarksburg, WV",
-                familyPhotos: [{ src: "/familyPhotos/clarkrobinsonfam.jpg" }, { src: "/familyPhotos/clarkrobinsonfam2.jpg" }],
+                familyPhotos: [
+                  { src: "/familyPhotos/clarkrobinsonfam.jpg" },
+                  { src: "/familyPhotos/clarkrobinsonfam2.jpg" },
+                ],
                 spouse: {
                   name: "Jennifer Robinson",
                   gender: "F",
@@ -488,6 +492,9 @@ export const familyData = {
               "Sandra Robinson",
               "Rebecca Davis",
             ],
+          },
+          {
+            src: "/familyPhotos/davisfam2.jpg",
           },
         ],
         spouse: {

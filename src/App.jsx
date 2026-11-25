@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import * as d3 from "d3";
 import { data, INITIAL_COUPLES } from "./data/buildTreeData.js";
-import FamilyTree from "./js/familytree.js";
+import FamilyTree, { layout_generation_badges } from "./js/familytree.js";
 import CardView from "./components/CardView.jsx";
 import Legend from "./components/Legend.jsx";
 import TextSizeControls from "./components/TextSizeControls.jsx";
@@ -111,6 +111,8 @@ function App() {
         });
       }
     });
+
+    layout_generation_badges();
 
     // Update layout if tree exists
     if (familyTreeRef.current) {

@@ -7,6 +7,7 @@ import {
   coordCenter,
 } from "d3-dag";
 import { INITIAL_COUPLES, ALL_FOUNDING_COUPLES } from "../data/buildTreeData.js";
+import { getGeneration } from "./generations.js";
 
 
 // extend javascript array class by a remove function
@@ -137,6 +138,57 @@ function d3_append_multiline_text(
         .attr("x", x);
     }
   }
+}
+
+// Adds a colored generation badge (e.g. "Gen Z") below a person's label
+function d3_append_generation_badge(d3element, node) {
+  if (node.is_union()) return;
+  const gen = getGeneration(node.get_birth_year());
+  if (!gen) return;
+  const badge = d3element
+    .append("g")
+    .attr("class", "gen-badge")
+    .attr("data-label", gen.label)
+    .style("pointer-events", "none");
+  badge.append("rect").attr("fill", gen.color);
+  badge
+    .append("text")
+    .attr("dominant-baseline", "central")
+    .attr("text-anchor", "middle")
+    .text(gen.label);
+  layout_generation_badges(badge);
+}
+
+// Sizes/positions generation badges relative to the current label font size.
+// Call again after the font size changes.
+export function layout_generation_badges(selection = d3.selectAll("g.gen-badge")) {
+  const fontSize =
+    parseInt(
+      getComputedStyle(document.documentElement).getPropertyValue(
+        "--node-label-font-size"
+      )
+    ) || 12;
+  const lineSep = fontSize * 1.4;
+  const badgeFont = fontSize * 0.72;
+  const height = badgeFont * 1.5;
+  selection.each(function () {
+    const g = d3.select(this);
+    const label = g.attr("data-label") || "";
+    // estimate width (getBBox is 0 while the tree view is hidden)
+    const width = label.length * badgeFont * 0.6 + badgeFont * 1.2;
+    // label is two lines centered on 0; place badge below the year line
+    const cy = lineSep / 2 + lineSep * 0.55 + height / 2;
+    g.attr("transform", `translate(13, ${cy})`);
+    g.select("rect")
+      .attr("x", 0)
+      .attr("y", -height / 2)
+      .attr("width", width)
+      .attr("height", height)
+      .attr("rx", height / 2);
+    g.select("text")
+      .attr("x", width / 2)
+      .style("font-size", `${badgeFont}px`);
+  });
 }
 
 class FTDataHandler {
@@ -1277,6 +1329,7 @@ class FTDrawer {
         FTDrawer.label_delimiter,
         "node-label"
       );
+      d3_append_generation_badge(d3.select(this), node);
     });
 
     // UPDATE
@@ -1308,7 +1361,8 @@ class FTDrawer {
     nodeExit.select("circle").attr("r", 1e-6);
 
     // animation: hide hidden nodes' labels
-    nodeExit.select("text").style("fill-opacity", 1e-6);
+    nodeExit.selectAll("text").style("fill-opacity", 1e-6);
+    nodeExit.selectAll(".gen-badge rect").style("fill-opacity", 1e-6);
 
     // ****************** links section ***************************
 

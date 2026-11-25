@@ -1341,6 +1341,35 @@ svg {
   font-size: 11px;
 }
 
+/* Generation badges */
+.gen-badge-pill {
+  display: inline-block;
+  margin-top: 3px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.legend-generations .legend-item {
+  margin-top: 3px;
+}
+
+.legend-generations .gen-badge-pill {
+  margin-top: 0;
+  min-width: 78px;
+  text-align: center;
+}
+
+.gen-badge text {
+  fill: #fff;
+  font-weight: 600;
+}
+
 .person-mini-other-spouses {
   color: #666;
   font-size: 11px;

@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import Icon from './Icons.jsx';
+import { GENERATIONS } from '../js/generations.js';
 
 /**
  * Legend/Symbols dropdown component for tree and card views
@@ -74,6 +75,19 @@ function Legend({ showNodeColors = false }) {
               <p><strong>~</strong> Passed away, year unknown</p>
               <p><strong>○</strong> Stillborn</p>
               <p><strong>⟷</strong> Divorced out of the family</p>
+            </div>
+          </div>
+          <div className="legend-section">
+            <div className="legend-subtitle">Generations:</div>
+            <div className="legend-generations">
+              {GENERATIONS.map((g) => (
+                <div className="legend-item" key={g.key}>
+                  <span className="gen-badge-pill" style={{ backgroundColor: g.color }}>
+                    {g.label}
+                  </span>
+                  <span>{g.start}–{g.end}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import Icon from './Icons.jsx';
 import FamilyPhotoCarousel from './FamilyPhotoCarousel';
+import { getGeneration } from '../js/generations.js';
 
 /**
  * ExpandablePersonCard - Shows a person with their spouse and expandable children
@@ -239,6 +240,7 @@ function PersonMini({
 
   const birthInfo = formatBirth();
   const deathInfo = formatDeath();
+  const generation = getGeneration(birthyear);
 
   return (
     <div className="person-mini" data-person-id={id}>
@@ -265,6 +267,17 @@ function PersonMini({
         )}
         {birthInfo && <div className="person-mini-birth">{birthInfo}</div>}
         {deathInfo && <div className="person-mini-death">{deathInfo}</div>}
+        {generation && (
+          <div className="person-mini-generation">
+            <span
+              className="gen-badge-pill"
+              style={{ backgroundColor: generation.color }}
+              title={`${generation.label} (${generation.start}–${generation.end})`}
+            >
+              {generation.label}
+            </span>
+          </div>
+        )}
         {otherSpouses && otherSpouses.length > 0 && (
           <div className="person-mini-other-spouses">
             Also married: {otherSpouses.map((s) => s.name).join(", ")}

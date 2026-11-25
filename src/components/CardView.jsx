@@ -4,6 +4,7 @@ import ExpandablePersonCard from './ExpandablePersonCard';
 import FamilyPhotoCarousel from './FamilyPhotoCarousel';
 import Icon from './Icons.jsx';
 import { mixedPhotos } from '../data/familyData.js';
+import { getGeneration } from '../js/generations.js';
 
 /**
  * CardView component displays family members starting with 4 founding couples,
@@ -273,6 +274,7 @@ function FounderMini({ person, onViewAncestors, onJumpToTree }) {
 
   const birthInfo = formatBirth();
   const deathInfo = formatDeath();
+  const generation = getGeneration(birthyear);
 
   return (
     <div className="founder-mini" data-person-id={id}>
@@ -295,6 +297,17 @@ function FounderMini({ person, onViewAncestors, onJumpToTree }) {
         {militaryService && <div className="founder-mini-military">🎖️ {militaryService}</div>}
         {birthInfo && <div className="founder-mini-birth">{birthInfo}</div>}
         {deathInfo && <div className="founder-mini-death">{deathInfo}</div>}
+        {generation && (
+          <div className="person-mini-generation">
+            <span
+              className="gen-badge-pill"
+              style={{ backgroundColor: generation.color }}
+              title={`${generation.label} (${generation.start}–${generation.end})`}
+            >
+              {generation.label}
+            </span>
+          </div>
+        )}
         {otherSpouses && otherSpouses.length > 0 && (
           <div className="founder-mini-other-spouses">
             Also married: {otherSpouses.map(s => s.name).join(', ')}

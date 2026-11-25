@@ -276,6 +276,7 @@ export const familyData = {
                       name: "Nick Anderson",
                       gender: "M",
                       imageLink: "/photos/Anderson/NickAnderson.jpg",
+                      fromFamily: { ref: "Anderson.Chastity Anderson" },
                     },
                   },
                 ],
@@ -2602,6 +2603,32 @@ export const familyData = {
             birthyear: 2014,
           },
         ],
+      },
+    ],
+  },
+  Anderson: {
+    founders: [
+      {
+        name: "Chris Anderson",
+        gender: "M",
+        imageLink: "/photos/Anderson/ChrisAnderson.jpg",
+      },
+      {
+        name: "Chastity Anderson",
+        gender: "F",
+        imageLink: "/photos/Anderson/ChastityAnderson.jpg",
+      },
+    ],
+    children: [
+      {
+        name: "Brayden Anderson",
+        gender: "M",
+        imageLink: "/photos/Anderson/BraydenAnderson.jpg",
+        spouse: {
+          name: "Delaney Anderson",
+          gender: "F",
+          imageLink: "/photos/Anderson/DelaneyAnderson.jpg",
+        },
       },
     ],
   },
